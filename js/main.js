@@ -81,6 +81,6 @@ function adicionar(){
   buttonAdd.innerHTML = post
 }
 
-buttonAdd.addEventListener('load', function(){
-  mainTag.removeChild(buttonAdd);
-})
+// buttonAdd.addEventListener('load', function(){
+//   mainTag.removeChild(buttonAdd);
+// })
