@@ -1,44 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="/css/mdb.min.css" />
-    <link rel="stylesheet" href="/css/style.css" />
-  </head>
-  <body>
-    <main class="container">
-      <h1 class="m-5">📋 Task Manager</h1>
-      <div id="new-task">
-        <div class="form-outline">
-          <input type="text" id="form12" class="form-control" />
-          <label class="form-label" for="form12">🚀 Digite uma tarefa</label>
-        </div>
-        <button id="btnAdd" class="btn btn-primary">add</button>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/mdb.min.css"/>
+  <link rel="stylesheet" href="./css/style.css"/>
+</head>
+
+<body>
+  <main class="container">
+    <h1 class="m-5">📋 Task Manager</h1>
+    <form action="" name="formulario">
+      <input type="text" name="senha" id="senha1" style="margin-bottom: 20px;" placeholder="digite sua senha">
+      <input type="text" name="rep_senha" id="senha2" style="margin-bottom: 20px;" placeholder="confirme sua senha">
+      <input type="button" onclick="return validacao()" value="verificar">
+    </form>
+
+    <div id="new-task">
+      <div class="form-outline">
+        <input type="text" onkeydown="return adicionar()" id="form12" class="form-control" />
+        <label class="form-label" for="form12">🚀 Digite uma tarefa</label>
       </div>
-      <ul class="task-list">
-        <li class="task-item">
-          <img src="/icons/close.png" id="close" alt="Excluir Tarefa" />
-          <p>content</p>
-          <img src="/icons/check.png" id="check" alt="Finalizar Tarefa" />
-        </li>
+      <div id="btnAdd"></div>
+    </div>
+    <ul class="task-list">
+      <li class="task-item">
+        <img src="./icons/close.png" id="close" alt="Excluir Tarefa" />
+        <p>content</p>
+        <img src="./icons/check.png" id="check" alt="Finalizar Tarefa" />
+      </li>
 
-        <li class="task-item done">
-          <img src="/icons/close.png" id="close" alt="Excluir Tarefa" />
-          <p>content</p>
-          <img src="/icons/check.png" id="check" alt="Finalizar Tarefa" />
-        </li>
+      <li class="task-item done">
+        <img src="./icons/close.png" id="close" alt="Excluir Tarefa" />
+        <p>content</p>
+        <img src="./icons/check.png" id="check" alt="Finalizar Tarefa" />
+      </li>
 
-        <li class="task-item done">
-          <img src="/icons/close.png" id="close" alt="Excluir Tarefa" />
-          <p>content</p>
-          <img src="/icons/check.png" id="check" alt="Finalizar Tarefa" />
-        </li>
-      </ul>
-    </main>
-    <script src="/js/mdb.min.js"></script>
-    <script src="/js/main.js"></script>
-  </body>
+      <li class="task-item done">
+        <img src="./icons/close.png" id="close" alt="Excluir Tarefa" />
+        <p>content</p>
+        <img src="./icons/check.png" id="check" alt="Finalizar Tarefa" />
+      </li>
+    </ul>
+  </main>
+  <script src="./js/mdb.min.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+
 </html>

@@ -1,9 +1,17 @@
 //selecionando o botão de Add
-const buttonAdd = document.querySelector("#btnAdd");
+const buttonAdd = document.getElementById("btnAdd");
 //selecionando o input
-const inputTask = document.querySelector("#form12");
+const inputTask = document.getElementById("form12");
 
 const tasklist = document.querySelector(".task-list");
+
+const mainTag = document.querySelector("main");
+
+const senha1 = document.getElementById('senha1');
+
+const senha2 = document.getElementById('senha2');
+
+const post = `<button id="btnAdd" class="btn btn-primary">add</button>`;
 
 function checkTask(taskLi) {
   taskLi.classList.add("done");
@@ -41,3 +49,38 @@ buttonAdd.onclick = () => {
 
   inputTask.value = "";
 };
+
+//validando as senhas
+function validacao() {
+  const senha = formulario.senha.value;
+  const rep_senha = formulario.rep_senha.value;
+
+  if (senha == "" || senha.length < 5) {
+    alert("preencha o campo com no mínimo 5 caracteres");
+    formulario.senha;
+    return false;
+  }
+
+  if (rep_senha == "" || rep_senha.length < 5) {
+    alert("preencha o campo com no mínimo 5 caracteres");
+    formulario.senha;
+    return false;
+  }
+
+  if (senha != rep_senha) {
+    senha1.style.borderColor = "red";
+    senha2.style.borderColor = "red";
+  } else {
+    senha1.style.borderColor = "green";
+    senha2.style.borderColor = "green";
+  }
+}
+
+function adicionar(){
+  // alert('oi')
+  buttonAdd.innerHTML = post
+}
+
+buttonAdd.addEventListener('load', function(){
+  mainTag.removeChild(buttonAdd);
+})
